@@ -14,6 +14,9 @@
 		F389B58C2A0D104700D04A6B /* ToLibrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B58B2A0D104700D04A6B /* ToLibrasTests.swift */; };
 		F389B5962A0D104700D04A6B /* ToLibrasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B5952A0D104700D04A6B /* ToLibrasUITests.swift */; };
 		F389B5982A0D104700D04A6B /* ToLibrasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B5972A0D104700D04A6B /* ToLibrasUITestsLaunchTests.swift */; };
+		F389B5A72A0D16F600D04A6B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B5A62A0D16F600D04A6B /* ImagePicker.swift */; };
+		F389B5AB2A0D35B700D04A6B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B5AA2A0D35B700D04A6B /* UIImage+Extension.swift */; };
+		F389B5AD2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = F389B5AC2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 		F389B5912A0D104700D04A6B /* ToLibrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToLibrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F389B5952A0D104700D04A6B /* ToLibrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToLibrasUITests.swift; sourceTree = "<group>"; };
 		F389B5972A0D104700D04A6B /* ToLibrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToLibrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F389B5A42A0D10EE00D04A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F389B5A62A0D16F600D04A6B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F389B5AA2A0D35B700D04A6B /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F389B5AC2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "ToLibras-HandPoses.mlpackage"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,9 @@
 		F389B5782A0D104600D04A6B /* ToLibras */ = {
 			isa = PBXGroup;
 			children = (
+				F389B5AC2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage */,
+				F389B5A52A0D16E600D04A6B /* Helpers */,
+				F389B5A42A0D10EE00D04A6B /* Info.plist */,
 				F389B5792A0D104600D04A6B /* ToLibrasApp.swift */,
 				F389B57B2A0D104600D04A6B /* ContentView.swift */,
 				F389B57D2A0D104700D04A6B /* Assets.xcassets */,
@@ -127,6 +137,15 @@
 				F389B5972A0D104700D04A6B /* ToLibrasUITestsLaunchTests.swift */,
 			);
 			path = ToLibrasUITests;
+			sourceTree = "<group>";
+		};
+		F389B5A52A0D16E600D04A6B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F389B5AA2A0D35B700D04A6B /* UIImage+Extension.swift */,
+				F389B5A62A0D16F600D04A6B /* ImagePicker.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F389B5AD2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage in Sources */,
+				F389B5A72A0D16F600D04A6B /* ImagePicker.swift in Sources */,
+				F389B5AB2A0D35B700D04A6B /* UIImage+Extension.swift in Sources */,
 				F389B57C2A0D104600D04A6B /* ContentView.swift in Sources */,
 				F389B57A2A0D104600D04A6B /* ToLibrasApp.swift in Sources */,
 			);
@@ -419,6 +441,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToLibras/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture um sinal de LIBRAS";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Escolha uma imagem";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -457,6 +482,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToLibras/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture um sinal de LIBRAS";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Escolha uma imagem";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
