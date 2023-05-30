@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32DB26F2A151687008C6119 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DB26E2A151687008C6119 /* DataModel.swift */; };
+		F32DB2742A165F3C008C6119 /* ImageClassifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DB2732A165F3C008C6119 /* ImageClassifierView.swift */; };
+		F32DB2772A1660EB008C6119 /* HandPoseClassifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DB2762A1660EB008C6119 /* HandPoseClassifierView.swift */; };
+		F32DB2792A1661F2008C6119 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F32DB2782A1661F2008C6119 /* MobileNetV2.mlmodel */; };
 		F389B57A2A0D104600D04A6B /* ToLibrasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B5792A0D104600D04A6B /* ToLibrasApp.swift */; };
 		F389B57C2A0D104600D04A6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389B57B2A0D104600D04A6B /* ContentView.swift */; };
 		F389B57E2A0D104700D04A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F389B57D2A0D104700D04A6B /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F32DB26E2A151687008C6119 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F32DB2732A165F3C008C6119 /* ImageClassifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierView.swift; sourceTree = "<group>"; };
+		F32DB2762A1660EB008C6119 /* HandPoseClassifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandPoseClassifierView.swift; sourceTree = "<group>"; };
+		F32DB2782A1661F2008C6119 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		F389B5762A0D104600D04A6B /* ToLibras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToLibras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F389B5792A0D104600D04A6B /* ToLibrasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToLibrasApp.swift; sourceTree = "<group>"; };
 		F389B57B2A0D104600D04A6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F32DB2342A14FA98008C6119 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				F32DB26E2A151687008C6119 /* DataModel.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F32DB2702A165F0B008C6119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F32DB2732A165F3C008C6119 /* ImageClassifierView.swift */,
+				F32DB2762A1660EB008C6119 /* HandPoseClassifierView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F32DB2752A165F5F008C6119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F32DB2782A1661F2008C6119 /* MobileNetV2.mlmodel */,
+				F389B5AC2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F389B56D2A0D104600D04A6B = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +136,9 @@
 		F389B5782A0D104600D04A6B /* ToLibras */ = {
 			isa = PBXGroup;
 			children = (
-				F389B5AC2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage */,
+				F32DB2752A165F5F008C6119 /* Models */,
+				F32DB2702A165F0B008C6119 /* Views */,
+				F32DB2342A14FA98008C6119 /* Camera */,
 				F389B5A52A0D16E600D04A6B /* Helpers */,
 				F389B5A42A0D10EE00D04A6B /* Info.plist */,
 				F389B5792A0D104600D04A6B /* ToLibrasApp.swift */,
@@ -278,11 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32DB2792A1661F2008C6119 /* MobileNetV2.mlmodel in Sources */,
 				F389B5AD2A0E5DFF00D04A6B /* ToLibras-HandPoses.mlpackage in Sources */,
+				F32DB2772A1660EB008C6119 /* HandPoseClassifierView.swift in Sources */,
 				F389B5A72A0D16F600D04A6B /* ImagePicker.swift in Sources */,
 				F389B5AB2A0D35B700D04A6B /* UIImage+Extension.swift in Sources */,
 				F389B57C2A0D104600D04A6B /* ContentView.swift in Sources */,
+				F32DB2742A165F3C008C6119 /* ImageClassifierView.swift in Sources */,
 				F389B57A2A0D104600D04A6B /* ToLibrasApp.swift in Sources */,
+				F32DB26F2A151687008C6119 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
